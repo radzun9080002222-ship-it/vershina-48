@@ -24,6 +24,15 @@
 - Яндекс.Метрика: счётчик `111309225`; материнский аккаунт `dima.radzun`.
 - Липецк использует отдельные рекламный кабинет, Метрику и Вебмастер.
 
+## Размещение
+
+- GitHub `main` остаётся источником истины; production-развёртывание выполняет GitHub Actions в Yandex Object Storage.
+- Бакеты: `vershina48.ru` (статический сайт) и `www.vershina48.ru` (HTTPS-редирект на основной домен).
+- Cloud DNS: зона `vershina48.ru.` (`dns55j01h4qpkkpafalf`), делегирование у регистратора — `ns1.yandexcloud.net` и `ns2.yandexcloud.net`.
+- DNS сайта: `ANAME @` → `vershina48.ru.website.yandexcloud.net.`, `CNAME www` → `www.vershina48.ru.website.yandexcloud.net.`, CAA разрешает `letsencrypt.org`.
+- Сертификат Certificate Manager: `vershina48-ru` (`fpq5at7e9ncogll9vkbu`); после статуса `Issued` его нужно подключить к обоим бакетам.
+- Workflow: `.github/workflows/deploy-yandex-cloud.yml`. Секреты `YC_STATIC_ACCESS_KEY_ID` и `YC_STATIC_SECRET_ACCESS_KEY` хранятся только в GitHub Secrets; их значения нигде не записывать.
+
 ## Где менять
 
 - `src/components/Hero.tsx` — главный экран.
