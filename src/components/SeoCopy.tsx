@@ -1,8 +1,8 @@
 const prices = [
-  { service: "Влажная уборка", rate: "120 ₽/м²", minimum: "от 4 500 ₽" },
-  { service: "Генеральная уборка", rate: "180 ₽/м²", minimum: "от 6 000 ₽" },
+  { service: "Влажная уборка", rate: "160 ₽/м²", minimum: "от 6 000 ₽" },
+  { service: "Генеральная уборка", rate: "250 ₽/м²", minimum: "от 9 000 ₽" },
   { service: "После ремонта", rate: "300 ₽/м²", minimum: "от 12 000 ₽" },
-  { service: "Под ключ", rate: "от 400 ₽/м²", minimum: "от 12 000 ₽" },
+  { service: "Под ключ", rate: "от 450 ₽/м²", minimum: "от 12 000 ₽" },
 ];
 
 export default function SeoCopy() {
@@ -21,7 +21,7 @@ export default function SeoCopy() {
           </p>
           <p className="mt-3 max-w-xl text-sm leading-7 text-ink/65">
             Расчёт в калькуляторе начинается с 25 м². Для уборки под ключ цена зависит
-            от типа окон: стандартные — 400 ₽/м², панорамные — 450 ₽/м².
+            от типа окон: стандартные — 450 ₽/м², панорамные — 550 ₽/м².
           </p>
         </div>
 
