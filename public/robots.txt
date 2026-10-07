@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vershina48.ru/sitemap.xml
+Sitemap: https://vershina-48.ru/sitemap.xml

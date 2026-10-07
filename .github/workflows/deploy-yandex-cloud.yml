@@ -1,8 +1,7 @@
 name: Deploy to Yandex Object Storage
 
 on:
-  push:
-    branches: ["main"]
+  # Включить push main после создания отдельных бакета и Secrets клона.
   workflow_dispatch:
 
 permissions:
@@ -14,13 +13,13 @@ concurrency:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.YC_STATIC_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_STATIC_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: ru-central1
       AWS_EC2_METADATA_DISABLED: "true"
-      YC_BUCKET: vershina48.ru
+      YC_BUCKET: vershina-48.ru
       YC_ENDPOINT: https://storage.yandexcloud.net
     steps:
       - uses: actions/checkout@v4
