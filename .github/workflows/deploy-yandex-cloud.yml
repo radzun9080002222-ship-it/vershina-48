@@ -1,7 +1,8 @@
 name: Deploy to Yandex Object Storage
 
 on:
-  # Включить push main после создания отдельных бакета и Secrets клона.
+  push:
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
