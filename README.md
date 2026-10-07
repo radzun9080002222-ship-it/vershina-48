@@ -24,7 +24,7 @@ pnpm run build    # сборка в dist/
 ## Публикация
 
 - Отдельный клон v2 для `vershina-48.ru`; оригинал `vershina48.ru` остаётся без изменений.
-- Публикация в Yandex Object Storage выполняется workflow; автоматический push включается после настройки новых Secrets.
+- Публикация в Yandex Object Storage выполняется workflow при push в `main`; отдельные Secrets клона настроены.
 - Основной домен сайта — `https://vershina-48.ru`; относительный `base` сохраняет корректную работу GitHub Pages и локальной сборки.
 - Пока сохранён исходный липецкий счётчик Метрики `111309225`; настройка аналитики нового домена и Вебмастера ещё не завершена.
 - Домен закреплён файлом `public/CNAME`; канонические URL, Open Graph, structured data, robots и sitemap используют `vershina-48.ru`.
